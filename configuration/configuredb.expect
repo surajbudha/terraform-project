@@ -1,0 +1,14 @@
+#!/usr/bin/expect
+
+spawn mysql_secure_installation
+    expect "): " {send \r}
+    expect "] " {send "Y\r"}
+    expect "assword: " {send "welcome1\r"}
+    expect "assword: " {send "welcome1\r"}
+    expect "n] " {send "Y\r"}
+    expect "n] " {send "n\r"}
+    expect "n] " {send "Y\r"}
+    expect "n] " {send "Y\r"}
+expect eof
+	
+	
